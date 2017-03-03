@@ -5,7 +5,12 @@ export interface QueryResponse {
 }
 
 export const getAllPets = gql`{
-  allPets{
-    name
+  allPets {
+    name,
+    createdAt,
+    image,
+    owner{
+      name
+    }
   }
 }`;

@@ -1,5 +1,22 @@
 .fab {
-    position: absolute;
-    bottom: 20px;
+    top: auto;
     right: 20px;
+    bottom: 20px;
+    left: auto;
+    position: fixed;
+}
+.example-card {
+  margin-bottom: 20px;
+}
+
+.example-header-image {
+  background-image: url('assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.outer-div {
+    padding: 30px;
+}
+.post-icon {
+    color: rgba(0,0,0,.54);
 }

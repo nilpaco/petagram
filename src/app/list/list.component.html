@@ -1,6 +1,18 @@
-<ul *ngFor="let pet of pets">
-  Score: {{pet.name}}
-</ul>
+
+<div class="outer-div">
+  <md-card class="example-card" *ngFor="let pet of pets">
+    <md-card-header>
+      <div md-card-avatar class="example-header-image"></div>
+      <md-card-title>{{pet.name}}</md-card-title>
+      <md-card-subtitle>{{pet.owner.name}}</md-card-subtitle>
+    </md-card-header>
+    <img md-card-image src="{{pet.image}}">
+    <md-card-actions>
+      <button md-icon-button><md-icon class="post-icon">favorite_border</md-icon></button>
+      <button md-icon-button><md-icon class="post-icon">insert_comment</md-icon></button>
+    </md-card-actions>
+  </md-card>
+</div>
 
 <button md-fab class="fab">
     <md-icon>add</md-icon>
