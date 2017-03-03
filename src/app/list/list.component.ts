@@ -18,6 +18,7 @@ export class ListComponent implements OnInit {
       query: getAllPets
     }).subscribe(({data}) => {
         this.posts = data.allPosts;
+        console.log(this.posts);
     });
   }
 

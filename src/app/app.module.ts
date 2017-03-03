@@ -7,10 +7,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule, MdIconModule } from '@angular/material';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ListComponent } from './list/list.component';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
@@ -26,7 +29,9 @@ export function provideClient(): ApolloClient {
   declarations: [
     AppComponent,
     ToolbarComponent,
-    ListComponent
+    ListComponent,
+    LoginComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,7 @@ export function provideClient(): ApolloClient {
     HttpModule,
     MaterialModule,
     MdIconModule,
+    AppRoutingModule,
     ApolloModule.forRoot(provideClient)
   ],
   providers: [],
