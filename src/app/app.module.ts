@@ -1,13 +1,16 @@
+import { ApolloClient, createNetworkInterface } from 'apollo-client';
+import { ApolloModule } from 'apollo-angular';
+
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule, MdIconModule } from '@angular/material';
-import { ApolloClient, createNetworkInterface } from 'apollo-client';
-import { ApolloModule } from 'apollo-angular';
 
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ListComponent } from './list/list.component';
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
@@ -22,7 +25,8 @@ export function provideClient(): ApolloClient {
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
