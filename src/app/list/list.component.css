@@ -8,9 +8,7 @@
 .example-card {
   margin-bottom: 20px;
 }
-
 .example-header-image {
-  background-image: url('assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
 
@@ -19,4 +17,10 @@
 }
 .post-icon {
     color: rgba(0,0,0,.54);
+}
+.fill-remaining {
+    flex: 1 1 auto;
+}
+md-card-actions {
+    display: flex;
 }

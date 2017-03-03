@@ -9,7 +9,7 @@ import { QueryResponse, getAllPets } from './list.interface';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  pets: any;
+  posts: any;
 
   constructor(private apollo: Apollo) { }
 
@@ -17,7 +17,7 @@ export class ListComponent implements OnInit {
     this.apollo.watchQuery<QueryResponse>({
       query: getAllPets
     }).subscribe(({data}) => {
-        this.pets = data.allPets;
+        this.posts = data.allPosts;
     });
   }
 

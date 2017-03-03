@@ -1,16 +1,19 @@
 import gql from 'graphql-tag';
 
 export interface QueryResponse {
-  allPets
+  allPosts
 }
 
 export const getAllPets = gql`{
-  allPets {
-    name,
+  allPosts {
+    description,
     createdAt,
     image,
-    owner{
+    pet{
       name
+      owner {
+        name
+      }
     }
   }
 }`;
