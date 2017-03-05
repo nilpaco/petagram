@@ -1,5 +1,7 @@
 import { ApolloClient, createNetworkInterface } from 'apollo-client';
 import { ApolloModule } from 'apollo-angular';
+import { AUTH_PROVIDERS } from 'angular2-jwt';
+
 
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -42,7 +44,7 @@ export function provideClient(): ApolloClient {
     AppRoutingModule,
     ApolloModule.forRoot(provideClient)
   ],
-  providers: [],
+  providers: [AUTH_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
