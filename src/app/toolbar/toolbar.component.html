@@ -19,9 +19,13 @@
                 <md-icon>notifications_off</md-icon>
                 <span>Disable alerts</span>
             </button>
-            <button md-menu-item>
+            <button md-menu-item *ngIf="auth.authenticated()" (click)="auth.logout()">
                 <md-icon>exit_to_app</md-icon>
-                <span>Sign out</span>
+                <span>Log out</span>
+            </button>
+            <button md-menu-item *ngIf="!auth.authenticated()" (click)="auth.login()">
+                <md-icon>perm_identity</md-icon>
+                <span>Log in</span>
             </button>
         </md-menu>
 </md-toolbar>

@@ -44,7 +44,7 @@ export function provideClient(): ApolloClient {
     AppRoutingModule,
     ApolloModule.forRoot(provideClient)
   ],
-  providers: [AUTH_PROVIDERS],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
